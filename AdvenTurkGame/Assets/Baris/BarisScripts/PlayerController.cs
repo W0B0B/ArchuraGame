@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     Vector2 mousePosition;
     float horDir;
     bool isHitDetect;
+    bool isclick;
     private void Awake() {
         _mainCamera=Camera.main;
     }
@@ -34,9 +35,18 @@ public class PlayerController : MonoBehaviour
     public void OnClickMoving(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        mousePosition =_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        if (context.started)
+        {
+            isclick=true;
+        }
+        mousePosition =_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());    
+        
     }
     private void FixedUpdate() {
-        transform.position=Vector2.MoveTowards(transform.position,new Vector2(mousePosition.x,transform.position.y),MovingStep*Time.deltaTime);
+        if (isclick==true)
+        {
+            transform.position=Vector2.MoveTowards(transform.position,new Vector2(mousePosition.x,transform.position.y),MovingStep*Time.deltaTime);    
+        }
+        
     }
 }
