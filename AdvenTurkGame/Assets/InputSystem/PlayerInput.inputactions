@@ -48,6 +48,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "DialogueState",
+            "id": "f106538f-f476-4fb9-adcc-7a63cc805355",
+            "actions": [
+                {
+                    "name": "DialogueEnd",
+                    "type": "Button",
+                    "id": "e1af6d47-cea6-49bf-96d7-58b7ff603e27",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5f45b970-e63c-4db1-9452-8b10a3cfdcfd",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DialogueEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

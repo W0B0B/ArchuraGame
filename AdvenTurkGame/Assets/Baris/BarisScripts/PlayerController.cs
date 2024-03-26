@@ -1,7 +1,5 @@
-using Unity.Mathematics;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
-
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
@@ -11,8 +9,6 @@ public class PlayerController : MonoBehaviour
     Camera _mainCamera;
     Rigidbody2D rb;
     Vector2 mousePosition;
-    float horDir;
-    bool isHitDetect;
     bool isclick;
     private void Awake() {
         _mainCamera=Camera.main;
@@ -20,11 +16,16 @@ public class PlayerController : MonoBehaviour
     private void Start() {
         rb=this.gameObject.GetComponent<Rigidbody2D>();
     }
-    public void OnClickInteract(InputAction.CallbackContext context)
+    
+    private void Update() {
+        OnClickInteract();
+        OnClickMoving();    
+    }
+    public void OnClickInteract()
     {
-        if (!context.started) return;
+        if (!Input.GetMouseButtonDown(0)) return;
         
-        RaycastHit2D rayHit=Physics2D.Raycast(_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),Vector3.forward,Mathf.Infinity,triggerMask);
+        RaycastHit2D rayHit=Physics2D.Raycast(_mainCamera.ScreenToWorldPoint(Input.mousePosition),Vector3.forward,Mathf.Infinity,triggerMask);
         if(!rayHit.collider)
         { 
             return;
@@ -32,21 +33,22 @@ public class PlayerController : MonoBehaviour
         rayHit.collider.GetComponent<Interactable>().Interact();
         
     }
-    public void OnClickMoving(InputAction.CallbackContext context)
+    public void OnClickMoving()
     {
-        if (!context.started) return;
-        if (context.started)
+        if (!Input.GetMouseButtonDown(1)) return;
+        if (Input.GetMouseButtonDown(1))
         {
             isclick=true;
         }
-        mousePosition =_mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());    
+        mousePosition =_mainCamera.ScreenToWorldPoint(Input.mousePosition);    
         
     }
     private void FixedUpdate() {
         if (isclick==true)
         {
-            transform.position=Vector2.MoveTowards(transform.position,new Vector2(mousePosition.x,transform.position.y),MovingStep*Time.deltaTime);    
-        }
-        
+            transform.position=Vector2.MoveTowards(transform.position,new Vector2(mousePosition.x,transform.position.y),MovingStep*Time.deltaTime);
+            
+        }  
     }
+
 }
