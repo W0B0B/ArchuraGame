@@ -6,6 +6,6 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName ="New Dialog",menuName ="Dialogue System/Dialogue")]
 public class DialogueScripts : ScriptableObject
 {
-    public List<DialogueClass> Dialogues=new List<DialogueClass>();
+    public string Dialogue;
 }
 

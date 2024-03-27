@@ -20,5 +20,6 @@ public class DialogueClass
 public class AnswerClass
 {
     public string Answer;
+    public UnityEvent AnswerEvent;
     public int JumpDIndex;
 }

@@ -1527,11 +1527,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - Dialogue: Bakkal amca bakkal amca
+  - Dialogue: 
     IsEnd: 0
     IsQuestion: 1
     Answers:
-    - Answer: ne var
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 2
     StartDialogueEvent:
       m_PersistentCalls:
@@ -1539,7 +1542,7 @@ MonoBehaviour:
     EndDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - Dialogue: "Hevesimi K\u0131rd\u0131n"
+  - Dialogue: 
     IsEnd: 1
     IsQuestion: 0
     Answers: []
@@ -1549,15 +1552,24 @@ MonoBehaviour:
     EndDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - Dialogue: "Unun var m\u0131 "
+  - Dialogue: 
     IsEnd: 0
     IsQuestion: 1
     Answers:
-    - Answer: 'var var '
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 3
-    - Answer: 'yok '
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 1
-    - Answer: Sana ne!!
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 1
     StartDialogueEvent:
       m_PersistentCalls:
@@ -1565,13 +1577,19 @@ MonoBehaviour:
     EndDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - Dialogue: "Ya\u011F\u0131n var m\u0131 "
+  - Dialogue: 
     IsEnd: 0
     IsQuestion: 1
     Answers:
-    - Answer: var var
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 4
-    - Answer: yok
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 1
     StartDialogueEvent:
       m_PersistentCalls:
@@ -1579,13 +1597,19 @@ MonoBehaviour:
     EndDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - Dialogue: "\u015Eekerin var m\u0131 "
+  - Dialogue: 
     IsEnd: 0
     IsQuestion: 1
     Answers:
-    - Answer: var var
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 5
-    - Answer: 'yok '
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 1
     StartDialogueEvent:
       m_PersistentCalls:
@@ -1593,13 +1617,19 @@ MonoBehaviour:
     EndDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - Dialogue: Ne Duruyorsun
+  - Dialogue: 
     IsEnd: 0
     IsQuestion: 1
     Answers:
-    - Answer: "Ne yapay\u0131m"
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 6
-    - Answer: "Helva m\u0131 yapay\u0131m "
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 1
     StartDialogueEvent:
       m_PersistentCalls:
@@ -1607,13 +1637,19 @@ MonoBehaviour:
     EndDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - Dialogue: Helva yapsana yelva yapsana
+  - Dialogue: 
     IsEnd: 1
     IsQuestion: 0
     Answers:
-    - Answer: "HAHAHAHAH SEN\u0130 \u015Fakac\u0131 \xE7ocuk"
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 6
-    - Answer: "yok yapamam benim kollar\u0131m yok"
+    - Answer: 
+      AnswerEvent:
+        m_PersistentCalls:
+          m_Calls: []
       JumpDIndex: 1
     StartDialogueEvent:
       m_PersistentCalls:
